@@ -1,26 +1,68 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro"; // Importar el componente SocialPill
+import LinkedInIcon from "../components/Icons/LinkedIn.astro";
+import GitHubIcon from "../components/Icons/GitHub.astro";
+import MailIcon from "../components/Icons/Mail.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+  title="Porfolio de Jhonvelasco - Desarrollador junior y Programador web"
+  description="Contrata a jhon velasco como desarrollador junior y programador web"
+>
   <main>
     <section class="w-full mx-auto lg:w-[740px] py-44">
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
-        Hola, Soy Jhon velasco <div class="flex justify-center items-center">
-          <Badge>Disponible para Trabajar</Badge>
+      {/* avatar  de la portada de la pagina*/}
+      <div class="flex items-center gap-4">
+        <img
+          class="w-28 h-28 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
+          src="/public/img/jhonvelasco2.jpg"
+          alt="Bordered avatar"
+        />
+        <div class="font-medium dark:text-white">
+          <div>Ingeniero Junior</div>
+          <div class="text-sm text-gray-500 dark:text-gray-400">
+            Web Frontend Developer
+          </div>
         </div>
+      </div>
+      <div class="h-4"></div>
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        Hola, Soy Jhon velasco <a
+          href="/public/Hoja_de_Vida.pdf"
+          download="Hoja_de_vida.pdf"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para Trabajar</Badge>
+        </a>
       </h1>
-      <h2 class="text-xl">
-        💻 Apasionado por la tecnología y el desarrollo de software, me
-        especializo en crear soluciones innovadoras y eficientes 🛠️ para
-        enfrentar desafíos complejos. Con experiencia en bases de datos,
-        desarrollo web 🌐, y un enfoque constante en el aprendizaje continuo 📚,
-        me comprometo a hacer de la tecnología una herramienta poderosa y
-        accesible para todos. 🚀
+      <h2 class="text-2xl text-wrap">
+        Soy de Colombia,<span class="text-yellow-200/90"
+          >+3 años de experiencia</span
+        > administrando sistemas de información,<span class="text-yellow-200/90"
+          >Apasionado por la tecnología y el desarrollo de software</span
+        > , me especializo en crear soluciones innovadoras y eficientes 🛠️ para enfrentar
+        desafíos complejos. Con <span class="text-yellow-200/90"
+          >experiencia en bases de datos, desarrollo web</span
+        >🌐 y un enfoque constante en el aprendizaje continuo 📚.
       </h2>
-
-      <ul></ul>
+      <nav class="flex justify-center items-center gap-x-4 mt-10">
+        <SocialPill href="https://www.linkedin.com/in/jhonvelasco/">
+          <LinkedInIcon class="w-8 h-8" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/jhoncodertech">
+          <GitHubIcon class="w-8 h-8" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:jhonvelasco.tech@gmail.com">
+          <MailIcon class="w-8 h-8" />
+          jhonvelasco.tech@gmail.com
+        </SocialPill>
+      </nav>
     </section>
-  </main>
-</Layout>
+  </main></Layout
+>
